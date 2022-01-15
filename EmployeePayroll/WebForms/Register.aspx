@@ -75,7 +75,7 @@
                 </script>
                 </div>
                 <div class="nextbutton">
-                    <asp:Button ID="Button1" runat="server" Text="Register" />
+                    <asp:Button ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" />
                 </div>
             </div>
         </div>
