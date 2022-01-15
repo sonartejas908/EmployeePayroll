@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: aliceblue;
 }
 
@@ -55,4 +55,8 @@
 
 .Login {
     width: 280px;
+}
+.sample {
+    display: flex;
+    flex-direction: column;
 }

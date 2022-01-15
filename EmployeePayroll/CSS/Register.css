@@ -7,13 +7,15 @@
 }
 .card {
     height: 550px;
-    width: 420px;
+    width: 394px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     justify-content: space-between;
     background-color: aliceblue;
+    top: 0px;
+    left: 0px;
 }
 .inputsfield{
     height:230px;
@@ -47,6 +49,10 @@
 }
 .signin{
     width:280px;
+}
+.sample{
+    display:flex;
+    flex-direction:column;
 }
 
 

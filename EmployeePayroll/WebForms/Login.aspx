@@ -18,15 +18,21 @@
             <div class="inputsfield">
                 <div class="MyName">
                     <h6>Email:</h6>
-                    <input type="email" placeholder="email" />
+                    <div class="sample">
+                        <asp:TextBox ID="TextBox1" placeholder="Enter Email" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Email cannot be blank" ControlToValidate="TextBox1" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
                 </div>
                 <div class="MyName">
                     <h6>Password:</h6>
-                    <input type="password" placeholder="password" id="myInput" />
+                    <div class="sample">
+                        <asp:TextBox ID="TextBox2" placeholder="Enter Password" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Password cannot be blank" ControlToValidate="TextBox2" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
                 </div>
             </div>
             <div class="Login">
-                <a href="#" class="link-dark">Login</a>
+                <a href="/WebForms/Register" class="link-dark">New User?</a>
             </div>
             <div class="checkboxandnext">
                 <div class="checkbox">
@@ -44,7 +50,8 @@
                 </script>
                 </div>
                 <div class="nextbutton">
-                    <button type="button" class="btn btn-secondary">Login</button>
+                    <%--<button type="button" class="btn btn-secondary">Login</button>--%>
+                    <asp:Button ID="Button1" runat="server" Text="Login" />
                 </div>
             </div>
         </div>
