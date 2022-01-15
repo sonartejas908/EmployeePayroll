@@ -1,0 +1,58 @@
+﻿.total {
+    top: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.card {
+    height: 550px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+
+.inputsfield {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nextbutton {
+    width: 280px;
+    display: flex;
+    justify-content: flex-end
+}
+
+.MyName {
+    width: 280px;
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkboxandnext {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox {
+    width: 300px;
+}
+
+.Input {
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.Login {
+    width: 280px;
+}

@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/EmployeePayroll.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="EmployeePayroll.WebForms.Register" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/EmployeePayroll.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EmployeePayroll.WebForms.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <link href="../CSS/Register.css" rel="stylesheet" />
+    <link href="../CSS/Login.css" rel="stylesheet" />
 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="total">
         <div class="card">
 
@@ -13,33 +13,24 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="UserLogo" width="80" height="80">
             </div>
             <div class="header">
-                <h4>User Registration</h4>
+                <h4>User Login</h4>
             </div>
             <div class="inputsfield">
                 <div class="MyName">
-                    <h6>Name:</h6>
-                    <input type="text" placeholder="user name" />
-
-                </div>
-                <div class="MyName">
                     <h6>Email:</h6>
                     <input type="email" placeholder="email" />
-                </div>
-                <div class="MyName">
-                    <h6>Mobile:</h6>
-                    <input type="tel" placeholder="mobile" />
                 </div>
                 <div class="MyName">
                     <h6>Password:</h6>
                     <input type="password" placeholder="password" id="myInput" />
                 </div>
             </div>
-            <div class="signin">
-                <a href="#" class="link-dark">Sign In</a>
+            <div class="Login">
+                <a href="#" class="link-dark">Login</a>
             </div>
             <div class="checkboxandnext">
                 <div class="checkbox">
-                    <input type="checkbox" runat="server" onclick="myFunction()">Show Password
+                    <input type="checkbox" onclick="myFunction()">Show Password
                 <script>
                     function myFunction() {
                         var x = document.getElementById("myInput");
@@ -53,12 +44,10 @@
                 </script>
                 </div>
                 <div class="nextbutton">
-                    <button type="button" runat="server" class="btn btn-secondary">Next</button>
+                    <button type="button" class="btn btn-secondary">Login</button>
                 </div>
             </div>
         </div>
     </div>
-
-
 
 </asp:Content>
