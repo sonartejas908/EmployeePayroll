@@ -1,0 +1,16 @@
+﻿.total {
+    top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.card{
+    width:800px;
+    height:550px;
+}
+.auto-style10{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
