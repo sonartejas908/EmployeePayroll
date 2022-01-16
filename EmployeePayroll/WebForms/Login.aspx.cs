@@ -19,30 +19,42 @@ namespace EmployeePayroll.WebForms
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string query = "select * from EmployeePayroll where email = @Email and password =@Password";
-            SqlCommand command = new SqlCommand(query, this.connection);
-            command.Parameters.AddWithValue("@Email", TextBox1.Text);
-            command.Parameters.AddWithValue("@Password", TextBox2.Text);
-            this.connection.Open();
-            SqlDataReader dr = command.ExecuteReader();
-            //this.connection.Close();
-            if(dr.HasRows)
+            try
             {
-                Session["email"] = TextBox1.Text;
-                Response.Write("<script>alert('Login Successful')</script>");
-                Response.Redirect("Dashboard.aspx");
-                reset();
+                string query = "select * from EmployeePayroll where email = @Email and password =@Password";
+                SqlCommand command = new SqlCommand(query, this.connection);
+                command.Parameters.AddWithValue("@Email", TextBox1.Text);
+                command.Parameters.AddWithValue("@Password", TextBox2.Text);
+                this.connection.Open();
+                SqlDataReader dr = command.ExecuteReader();
+                //this.connection.Close();
+                if (dr.HasRows)
+                {
+                    Session["email"] = TextBox1.Text;
+                    Response.Write("<script>alert('Login Successful')</script>");
+                    Response.Redirect("Dashboard.aspx");
+                    reset();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Login Failed')</script>");
+                    reset();
+                }
+                connection.Close();
             }
-            else
+            catch(Exception message)
             {
-                Response.Write("<script>alert('Login Failed')</script>");
-                reset();
+                Console.WriteLine(message.Message);
             }
-            connection.Close();
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
