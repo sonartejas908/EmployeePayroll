@@ -26,7 +26,7 @@
                 <div class="MyName">
                     <h6>Password:</h6>
                     <div class="sample">
-                        <asp:TextBox ID="TextBox2" placeholder="Enter Password" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" type ="password" placeholder="Enter Password" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Password cannot be blank" ControlToValidate="TextBox2" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="nextbutton">
                     <%--<button type="button" class="btn btn-secondary">Login</button>--%>
-                    <asp:Button ID="Button1" runat="server" Text="Login" />
+                    <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
                 </div>
             </div>
         </div>
